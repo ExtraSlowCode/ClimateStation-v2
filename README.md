@@ -9,7 +9,7 @@ Successor to [ClimateStation](https://github.com/ExtraSlowCode/ClimateStation/tr
 ---
 
 ![ClimateStation v2 dashboard](img/dashboard.png)
-![ClimateStation v2 device](aasdkasjdkjasd)
+![ClimateStation v2 device](img/prototype.jpg)
 
 ---
 
@@ -48,6 +48,9 @@ The case design is included in `/case` as a `.stl` file.
   - Compressed (1 reading/hour) beyond that, ~5 months total
 - `/history.csv` download endpoint
 - Threaded: sensor loop and web server run independently
+- Custom-designed case:
+  - Easy to print at-home
+  - Smart wall mount for screws
 
 ## Setup
 
@@ -74,7 +77,7 @@ src/
   storage.py    # CSV read/write, tiered compression
   keys.py       # WiFi credentials (not committed)
 case/
-  climatestation.stl
+  case_v2.stl
 ```
 
 ## On AI Assistance
@@ -84,5 +87,5 @@ The software refactoring; restructuring the original monolithic script into a mo
 ## Notes
 
 - Timestamps are UTC — Stockholm is UTC+1 (CET) or UTC+2 (CEST)
-- The board LED stays on as a WiFi connection indicator
-- `keys.py` is excluded from version control — keep it out of commits
+- The board LED stays on as a WiFi connection indicator, and blinks while attempting to connect.
+- `keys.py` is excluded from version control to keep it out of commits
